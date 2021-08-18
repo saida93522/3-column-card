@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+*,
+::before,
+::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --card1-color : hsl(31, 77%, 52%);
+    --card2-color:hsl(184, 100%, 22%);
+    --card3-color:hsl(179, 100%, 13%);
+    --pg-color:hsla(0, 0%, 100%, 0.75);
+    --bg-btns-h : hsl(0, 0%, 95%);
+}
+html{
+    font-size: 62.5%;
+    line-height: 1.6;
+}
+
+body{
+    font-family: 'Lexend Deca', sans-serif;
+    background: var(--bg-btns-h);
+    color: var(--bg-btns-h);
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin:0 auto;
+    width: 100vw;
+    min-height: 95vh;
+    margin-bottom: 4rem;
+}
+
+.img-container img{
+   width: 6rem;
+}
+
+
+/* cards */
+.cards{
+    flex-basis: auto;
+    padding: 3rem 5rem;
+    text-align: left;
+    letter-spacing: 0.1ch;
+    max-width: 30rem;
+    min-height: 42rem;
+}
+.card-header{
+    font-family: 'Big Shoulders Display', cursive;
+    font-size: 3rem;
+    text-transform: uppercase;
+    padding: 1.5rem 0;
+}
+.cards p{
+    padding-top: 1rem;
+    color: var(--pg-color);
+    font-size:1.3rem;
+}
+.card1{
+    background: var(--card1-color);
+    border-radius: 5px 0 0 5px;
+}
+.card2{
+    background: var(--card2-color);
+}
+.card3{
+    background: var(--card3-color);
+    border-radius: 0px 5px 5px 0;
+}
+
+.cards button{
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-top: 7rem;
+    padding: 0.8rem 1.7rem;
+    border-radius: 20px;
+    border: 1px solid var(--bg-btns-h);
+    text-align: center;
+}
+
+/* Card buttons */
+.card1 button{
+    color: var(--card1-color)
+}
+.card2 button{
+    color: var(--card2-color)
+}
+.card3 button{
+    color: var(--card3-color)
+}
+
+/* media queries */
+@media all and (max-width:900px){
+    .container{
+        flex-direction: column;
+        margin-top: 3rem;
+    }
+
+    .card1{
+        border-radius:5px 5px 0 0 ;
+    }
+
+    .card3{
+        background: var(--card3-color);
+        border-radius: 0 0 5px 5px;
+    }
+}
+
+
+
+
+/* footer */
+.attribution {
+    color: #000;
+    margin: 16rem auto;
+    width: 60%;
+    font-size: clamp(1.5rem,1.3rem,1.1rem);
+    text-align: center;
+}
+.attribution a {
+    padding-right: 1.2rem; 
+    color: hsl(228, 45%, 44%); 
+}
